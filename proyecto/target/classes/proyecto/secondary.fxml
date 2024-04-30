@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="785.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyecto.SecondaryController">
+   <children>
+      <ListView fx:id="lista" layoutX="224.0" layoutY="14.0" prefHeight="233.0" prefWidth="361.0" style="-fx-background-color: white;" />
+      <Button fx:id="BuscarCanciones" layoutX="21.0" layoutY="20.0" mnemonicParsing="false" onAction="#BuscarCancionesAccion" prefHeight="38.0" prefWidth="151.0" style="-fx-background-radius: 30px; -fx-background-color: black; -fx-border-color: #f403ff; -fx-border-radius: 30px; -fx-border-width: 3px;" text=" Buscar Genero" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="BuscarCancinesPlaylist" layoutX="21.0" layoutY="66.0" mnemonicParsing="false" onAction="#BuscarCancinesPlaylistAccion" prefHeight="38.0" prefWidth="183.0" style="-fx-background-radius: 30px; -fx-background-color: black; -fx-border-color: #00d90e; -fx-border-radius: 30px; -fx-border-width: 3px;" text=" Buscar en mis PlayLists" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="crearPlaylist" layoutX="625.0" layoutY="14.0" mnemonicParsing="false" onAction="#crearPlaylistAccion" prefHeight="51.0" prefWidth="137.0" style="-fx-background-radius: 30px; -fx-background-color: black; -fx-border-color: #adfffe; -fx-border-radius: 30px; -fx-border-width: 3px;" text="Crear Playlist" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="añadirPlaylist" layoutX="625.0" layoutY="72.0" mnemonicParsing="false" onAction="#añadirPlaylistAccion" prefHeight="51.0" prefWidth="137.0" style="-fx-background-radius: 30px; -fx-background-color: black; -fx-border-color: #e5ff54; -fx-border-radius: 30px; -fx-border-width: 3px;" text="Añadir a Playlist" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="borrarPlaylist" layoutX="625.0" layoutY="131.0" mnemonicParsing="false" onAction="#borrarPlaylistAccion" prefHeight="51.0" prefWidth="137.0" style="-fx-background-radius: 30px; -fx-background-color: black; -fx-border-color: #68ffc0; -fx-border-radius: 30px; -fx-border-width: 3px;" text="Borrar Playlist" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Slider fx:id="LugarMusicaSlider" layoutX="234.0" layoutY="331.0" onDragDetected="#LugarMusicaSliderAccion" prefHeight="51.0" prefWidth="361.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <SepiaTone />
+         </effect></Slider>
+      <Label fx:id="tiempoTranscurrido" layoutX="160.0" layoutY="338.0" prefHeight="38.0" prefWidth="66.0" text="00:00" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="tiempoCancion" layoutX="603.0" layoutY="338.0" prefHeight="38.0" prefWidth="66.0" text="00:00" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Slider fx:id="PitchMusica" layoutX="239.0" layoutY="393.0" onDragDetected="#PitchMusicaAccion" prefHeight="15.0" prefWidth="278.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Slider>
+      <Label layoutX="196.0" layoutY="393.0" text="Pitch" textFill="WHITE" />
+      <Button fx:id="Play" layoutX="360.0" layoutY="280.0" mnemonicParsing="false" onAction="#PlayAccion" prefHeight="51.0" prefWidth="66.0" style="-fx-background-radius: 40px; -fx-background-color: black; -fx-border-color: green; -fx-border-radius: 40px; -fx-border-width: 3px;" text="Play" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="Pausa" layoutX="360.0" layoutY="280.0" mnemonicParsing="false" onAction="#PausaAccion" prefHeight="51.0" prefWidth="66.0" style="-fx-background-radius: 40px; -fx-background-color: black; -fx-border-color: yellow; -fx-border-radius: 40px; -fx-border-width: 3px;" text="Pausa" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Slider fx:id="VolumenMusica" layoutX="239.0" layoutY="429.0" onDragDetected="#VolumenMusicaAccion" prefHeight="15.0" prefWidth="278.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Slider>
+      <Label fx:id="volumenSlider" layoutX="167.0" layoutY="429.0" text="Volumen" textFill="WHITE" />
+      <Button fx:id="ReiniciarPitch" layoutX="526.0" layoutY="389.0" mnemonicParsing="false" onAction="#ReiniciarPitchAccion" style="-fx-background-radius: 20px; -fx-background-color: black; -fx-border-color: cyan; -fx-border-width: 3px; -fx-border-radius: 20px;" text="Reiniciar Pitch" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="ReiniciarVolumen" layoutX="526.0" layoutY="425.0" mnemonicParsing="false" onAction="#ReiniciarVolumenAccion" style="-fx-background-radius: 20px; -fx-background-color: black; -fx-border-color: cyan; -fx-border-width: 3px; -fx-border-radius: 20px;" text="Reiniciar Volumen" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="VolverBoton" layoutX="350.0" layoutY="472.0" mnemonicParsing="false" onAction="#VolverBotonAccion" prefHeight="51.0" prefWidth="86.0" style="-fx-background-radius: 30px; -fx-background-color: black; -fx-border-color: red; -fx-border-width: 3px; -fx-border-radius: 30px;" text="Volver" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="IniciarCancion" layoutX="21.0" layoutY="116.0" mnemonicParsing="false" onAction="#IniciarCancionAccion" prefHeight="38.0" prefWidth="151.0" style="-fx-background-radius: 30px; -fx-background-color: black; -fx-border-color: orange; -fx-border-radius: 30px; -fx-border-width: 3px;" text="Iniciar Cancion" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</Pane>
